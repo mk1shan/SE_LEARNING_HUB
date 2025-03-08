@@ -1,56 +1,8 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Suspense, lazy } from 'react';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { 
-  fas,
-  faVideo,
-  faServer,
-  faGraduationCap,
-  faChalkboardTeacher,
-  faBook,
-  faClipboardCheck,
-  faLightbulb,
-  faCodeBranch,
-  faCalendar,
-  faSpinner,
-  faExclamationCircle,
-  faRedo,
-  faExternalLinkAlt,
-  faHeart,
-  faPlusCircle,
-  faNewspaper,
-  faSearch,
-  faLaptopCode,
-  faDesktop,
-  faProjectDiagram,
-  faCertificate,
-  faRocket,
-  faChevronDown,
-  faArrowRight,
-  faClock,
-  faUsers,
-  faPaintBrush,
-  faCheckCircle,
-  faMobileAlt,
-  faCloud,
-  faDatabase,
-  faCubes,
-  faQuestion,
-  faCheck,
-  faSitemap,
-  faComments,
-  faUserTie,
-  faNetworkWired,
-  faBookReader,
-  faCode,
-  faArrowUp,
-  faStar,
-  faLink,
-  faEnvelope,
-  faPlus,
-  faTimes
-} from '@fortawesome/free-solid-svg-icons';
-import { fab, faGithub } from '@fortawesome/free-brands-svg-icons';
+import { fas } from '@fortawesome/free-solid-svg-icons';
+import { fab } from '@fortawesome/free-brands-svg-icons';
 import { FirebaseProvider } from './contexts/FirebaseContext';
 import { SearchProvider } from './contexts/SearchContext';
 import ErrorBoundary from './components/layout/ErrorBoundary';
