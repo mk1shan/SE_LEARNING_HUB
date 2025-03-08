@@ -1,0 +1,237 @@
+.certifications-hero {
+  background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+  padding: 6rem 2rem;
+  text-align: center;
+  color: white;
+}
+
+.certifications-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.platform-filter {
+  display: flex;
+  justify-content: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 3rem;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary-color) transparent;
+}
+
+.platform-filter::-webkit-scrollbar {
+  height: 6px;
+}
+
+.platform-filter::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.platform-filter::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color);
+  border-radius: 6px;
+}
+
+.platform-btn {
+  padding: 0.75rem 1.5rem;
+  background: var(--card-bg);
+  border: 2px solid var(--primary-color);
+  color: var(--text-color);
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  white-space: nowrap;
+  min-width: fit-content;
+}
+
+.platform-btn.active,
+.platform-btn:hover {
+  background: var(--primary-color);
+  color: white;
+}
+
+.certifications-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.certification-card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.certification-card::before {
+  content: "FREE";
+  position: absolute;
+  top: 10px;
+  right: -35px;
+  background: var(--success-color);
+  color: white;
+  padding: 5px 40px;
+  transform: rotate(45deg);
+  font-size: 0.75rem;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.certification-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.certification-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.certification-header h3 {
+  flex: 1;
+  min-width: 200px;
+  margin: 0;
+  font-size: 1.1rem;
+  line-height: 1.4;
+}
+
+.platform-icon {
+  font-size: 2rem;
+  color: var(--primary-color);
+}
+
+.level-badge {
+  background: var(--primary-color);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  margin-left: auto;
+}
+
+.certification-details {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-color);
+  opacity: 0.8;
+}
+
+.skills-section {
+  margin-bottom: 1.5rem;
+}
+
+.skills-section h4 {
+  margin-bottom: 0.75rem;
+  color: var(--text-color);
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.skill-tag {
+  background: rgba(99, 102, 241, 0.1);
+  color: var(--primary-color);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  transition: all 0.2s ease;
+  border: 1px solid rgba(99, 102, 241, 0.2);
+}
+
+.skill-tag:hover {
+  background: var(--primary-color);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.exam-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: white;
+  background: var(--primary-color);
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+  margin-top: auto;
+  text-align: center;
+  justify-content: center;
+  width: 100%;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.exam-link:hover {
+  background: var(--secondary-color);
+}
+
+@media screen and (max-width: 768px) {
+  .certifications-hero {
+    padding: 4rem 1rem;
+  }
+
+  .certifications-section {
+    padding: 1rem;
+  }
+
+  .platform-filter {
+    flex-direction: column;
+    padding: 0 1rem 1rem;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+
+  .platform-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .certification-card {
+    padding: 1rem;
+  }
+
+  .certification-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .level-badge {
+    margin-left: 0;
+  }
+
+  .certification-details {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}

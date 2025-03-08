@@ -1,0 +1,169 @@
+/* Loading Component */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+  color: var(--primary-color);
+}
+
+.loading-text {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  color: var(--text-color);
+}
+
+/* Error Message */
+.error-container {
+  text-align: center;
+  padding: 2rem;
+  color: #ef4444;
+}
+
+.error-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.error-message {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.error-action {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: var(--primary-color);
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  margin-top: 1rem;
+  transition: background 0.3s ease;
+}
+
+.error-action:hover {
+  background: var(--secondary-color);
+}
+
+/* Toast Notifications */
+.toast-container {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 1000;
+}
+
+.toast {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: white;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 0.5rem;
+  animation: slideIn 0.3s ease;
+}
+
+.toast.success {
+  border-left: 4px solid #22c55e;
+}
+
+.toast.error {
+  border-left: 4px solid #ef4444;
+}
+
+.toast.info {
+  border-left: 4px solid var(--primary-color);
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Breadcrumb Navigation */
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  background: rgba(255, 255, 255, 0.9);
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.breadcrumb-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.breadcrumb-separator {
+  color: #9ca3af;
+}
+
+.breadcrumb-item.active {
+  color: var(--primary-color);
+  font-weight: 500;
+}
+
+/* Modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  max-width: 500px;
+  width: 90%;
+  position: relative;
+  animation: modalEnter 0.3s ease;
+}
+
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--text-color);
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.modal-close:hover {
+  opacity: 1;
+}
+
+@keyframes modalEnter {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
